@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Business Online System", "E-Business Online System\E-Business Online System.csproj", "{2AD92632-E23F-4F6E-9BF9-E5F567D1C291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Business Online System.Tests", "E-Business Online System.Tests\E-Business Online System.Tests.csproj", "{94A1D785-47A4-4D69-A1D1-394CC0112436}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AD92632-E23F-4F6E-9BF9-E5F567D1C291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD92632-E23F-4F6E-9BF9-E5F567D1C291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD92632-E23F-4F6E-9BF9-E5F567D1C291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD92632-E23F-4F6E-9BF9-E5F567D1C291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94A1D785-47A4-4D69-A1D1-394CC0112436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A1D785-47A4-4D69-A1D1-394CC0112436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A1D785-47A4-4D69-A1D1-394CC0112436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A1D785-47A4-4D69-A1D1-394CC0112436}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

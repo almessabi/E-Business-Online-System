@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3269881745d345c6b637e5b091c8eba5" Name="Diagram1">
+        <EntityTypeShape EntityType="EbusinessModel.Address" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Category" Width="1.5" PointX="11.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.City" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Country" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Customer" Width="1.5" PointX="10.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Customer_Claim" Width="1.5" PointX="12.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Customer_Credit_Cards" Width="1.5" PointX="12.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Customer_Review" Width="1.5" PointX="15.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Customer_State" Width="1.5" PointX="8.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Dimension_Unit" Width="1.5" PointX="9" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Order" Width="1.5" PointX="12.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Order_Line_Item" Width="1.5" PointX="15" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Order_State" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Payment" Width="1.5" PointX="15" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Product_By_Supplier" Width="1.5" PointX="15.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Product_Dimension" Width="1.5" PointX="11.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Product_Item" Width="1.5" PointX="18.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Product_Item_State" Width="1.5" PointX="16.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Product_Specification" Width="1.5" PointX="13.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Shipment" Width="1.5" PointX="18.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Shipment_Service_Type" Width="1.5" PointX="16" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Shopping_Cart" Width="1.5" PointX="17.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Shopping_Cart_Items" Width="1.5" PointX="20" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Shopping_Cart_State" Width="1.5" PointX="15.5" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.State_Or_Provence" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Supplier" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.Supplier_Contact_Preson" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.webpages_Membership" Width="1.5" PointX="2.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.webpages_OAuthMembership" Width="1.5" PointX="4.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EbusinessModel.webpages_Roles" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="EbusinessModel.FK_Address_City" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Address_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Address_State_Or_Provence" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Billing_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shipping_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Specification_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_City_State_Or_Provence" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_State_Or_Provence_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Claim_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Credit_Cards_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Customer_State" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Review_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Payment_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shipment_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shopping_Cart_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Claim_Payment" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Payment_Customer_Credit_Cards" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Customer_Review_Product_Specification" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Dimension_Dimension_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Order_Line_Item_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Order_Order_State" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Payment_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shipment_Order_Line_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_By_Supplier_Product_Specification" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_By_Supplier_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Specification_Product_Dimension" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Item_Product_Item_State" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Item_Product_Specification" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Product_Item_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shopping_Cart_Items_Product_Specification" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shipment_Shipment_Service_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shopping_Cart_Items_Shopping_Cart" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Shopping_Cart_Shopping_Cart_State" ManuallyRouted="false" />
+        <AssociationConnector Association="EbusinessModel.FK_Supplier_Contact_Preson_Supplier" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

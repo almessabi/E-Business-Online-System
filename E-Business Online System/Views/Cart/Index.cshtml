@@ -1,0 +1,63 @@
+﻿@model IEnumerable<E_Business_Online_System.Models.Shopping_Cart>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cart_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cart_Date_And_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cart_Number_of_Products)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cart_Total_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shopping_Cart_State.Cart_State_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Cust_FName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cart_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cart_Date_And_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cart_Number_of_Products)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cart_Total_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shopping_Cart_State.Cart_State_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.Cust_FName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Cart_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Cart_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Cart_ID })
+        </td>
+    </tr>
+}
+
+</table>

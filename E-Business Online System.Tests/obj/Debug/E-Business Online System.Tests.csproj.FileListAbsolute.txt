@@ -1,0 +1,48 @@
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\E-Business Online System.Tests.dll.config
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\E-Business Online System.Tests.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\E-Business Online System.Tests.pdb
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\E-Business Online System.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Helpers.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Http.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Mvc.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Razor.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\EntityFramework.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Optimization.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Microsoft.Web.WebPages.OAuth.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.AspNet.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\WebGrease.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.Core.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OAuth.Consumer.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OAuth.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OpenId.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Antlr3.Runtime.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\E-Business Online System.pdb
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Helpers.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Http.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Mvc.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.Razor.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\EntityFramework.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\Microsoft.Web.WebPages.OAuth.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.AspNet.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.Core.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OAuth.Consumer.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OAuth.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\bin\Debug\DotNetOpenAuth.OpenId.xml
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\obj\Debug\E-Business Online System.Tests.csprojResolveAssemblyReference.cache
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\obj\Debug\E-Business Online System.Tests.dll
+D:\INSE-6260 Project\E-Business Online System\E-Business Online System.Tests\obj\Debug\E-Business Online System.Tests.pdb

@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EbusinessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EbusinessModelStoreContainer">
+    <EntitySet Name="Address" EntityType="EbusinessModel.Store.Address" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="EbusinessModel.Store.Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="City" EntityType="EbusinessModel.Store.City" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Country" EntityType="EbusinessModel.Store.Country" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer" EntityType="EbusinessModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer_Claim" EntityType="EbusinessModel.Store.Customer_Claim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer_Credit_Cards" EntityType="EbusinessModel.Store.Customer_Credit_Cards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer_Review" EntityType="EbusinessModel.Store.Customer_Review" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer_State" EntityType="EbusinessModel.Store.Customer_State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dimension_Unit" EntityType="EbusinessModel.Store.Dimension_Unit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="EbusinessModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order_Line_Item" EntityType="EbusinessModel.Store.Order_Line_Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order_State" EntityType="EbusinessModel.Store.Order_State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Payment" EntityType="EbusinessModel.Store.Payment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_By_Supplier" EntityType="EbusinessModel.Store.Product_By_Supplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Dimension" EntityType="EbusinessModel.Store.Product_Dimension" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Item" EntityType="EbusinessModel.Store.Product_Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Item_State" EntityType="EbusinessModel.Store.Product_Item_State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product_Specification" EntityType="EbusinessModel.Store.Product_Specification" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shipment" EntityType="EbusinessModel.Store.Shipment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shipment_Service_Type" EntityType="EbusinessModel.Store.Shipment_Service_Type" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shopping_Cart" EntityType="EbusinessModel.Store.Shopping_Cart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shopping_Cart_Items" EntityType="EbusinessModel.Store.Shopping_Cart_Items" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shopping_Cart_State" EntityType="EbusinessModel.Store.Shopping_Cart_State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State_Or_Provence" EntityType="EbusinessModel.Store.State_Or_Provence" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Supplier" EntityType="EbusinessModel.Store.Supplier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Supplier_Contact_Preson" EntityType="EbusinessModel.Store.Supplier_Contact_Preson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="EbusinessModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="EbusinessModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="EbusinessModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Address_City" Association="EbusinessModel.Store.FK_Address_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_Country" Association="EbusinessModel.Store.FK_Address_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address_State_Or_Provence" Association="EbusinessModel.Store.FK_Address_State_Or_Provence">
+      <End Role="State_Or_Provence" EntitySet="State_Or_Provence" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Billing_Address" Association="EbusinessModel.Store.FK_Billing_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country" Association="EbusinessModel.Store.FK_City_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_State_Or_Provence" Association="EbusinessModel.Store.FK_City_State_Or_Provence">
+      <End Role="State_Or_Provence" EntitySet="State_Or_Provence" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Claim_Customer" Association="EbusinessModel.Store.FK_Customer_Claim_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Customer_Claim" EntitySet="Customer_Claim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Claim_Payment" Association="EbusinessModel.Store.FK_Customer_Claim_Payment">
+      <End Role="Payment" EntitySet="Payment" />
+      <End Role="Customer_Claim" EntitySet="Customer_Claim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Credit_Cards_Customer" Association="EbusinessModel.Store.FK_Customer_Credit_Cards_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Customer_Credit_Cards" EntitySet="Customer_Credit_Cards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Customer_State" Association="EbusinessModel.Store.FK_Customer_Customer_State">
+      <End Role="Customer_State" EntitySet="Customer_State" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Review_Customer" Association="EbusinessModel.Store.FK_Customer_Review_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Customer_Review" EntitySet="Customer_Review" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Review_Product_Specification" Association="EbusinessModel.Store.FK_Customer_Review_Product_Specification">
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+      <End Role="Customer_Review" EntitySet="Customer_Review" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customer" Association="EbusinessModel.Store.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Line_Item_Order" Association="EbusinessModel.Store.FK_Order_Line_Item_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Order_Line_Item" EntitySet="Order_Line_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Order_State" Association="EbusinessModel.Store.FK_Order_Order_State">
+      <End Role="Order_State" EntitySet="Order_State" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Customer" Association="EbusinessModel.Store.FK_Payment_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Customer_Credit_Cards" Association="EbusinessModel.Store.FK_Payment_Customer_Credit_Cards">
+      <End Role="Customer_Credit_Cards" EntitySet="Customer_Credit_Cards" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Payment_Order" Association="EbusinessModel.Store.FK_Payment_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_By_Supplier_Product_Specification" Association="EbusinessModel.Store.FK_Product_By_Supplier_Product_Specification">
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+      <End Role="Product_By_Supplier" EntitySet="Product_By_Supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_By_Supplier_Supplier" Association="EbusinessModel.Store.FK_Product_By_Supplier_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Product_By_Supplier" EntitySet="Product_By_Supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Dimension_Dimension_Unit" Association="EbusinessModel.Store.FK_Product_Dimension_Dimension_Unit">
+      <End Role="Dimension_Unit" EntitySet="Dimension_Unit" />
+      <End Role="Product_Dimension" EntitySet="Product_Dimension" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Item_Product_Item_State" Association="EbusinessModel.Store.FK_Product_Item_Product_Item_State">
+      <End Role="Product_Item_State" EntitySet="Product_Item_State" />
+      <End Role="Product_Item" EntitySet="Product_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Item_Product_Specification" Association="EbusinessModel.Store.FK_Product_Item_Product_Specification">
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+      <End Role="Product_Item" EntitySet="Product_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Item_Supplier" Association="EbusinessModel.Store.FK_Product_Item_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Product_Item" EntitySet="Product_Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Specification_Category" Association="EbusinessModel.Store.FK_Product_Specification_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Specification_Product_Dimension" Association="EbusinessModel.Store.FK_Product_Specification_Product_Dimension">
+      <End Role="Product_Dimension" EntitySet="Product_Dimension" />
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_Customer" Association="EbusinessModel.Store.FK_Shipment_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Shipment" EntitySet="Shipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_Order_Line_Item" Association="EbusinessModel.Store.FK_Shipment_Order_Line_Item">
+      <End Role="Order_Line_Item" EntitySet="Order_Line_Item" />
+      <End Role="Shipment" EntitySet="Shipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_Shipment_Service_Type" Association="EbusinessModel.Store.FK_Shipment_Shipment_Service_Type">
+      <End Role="Shipment_Service_Type" EntitySet="Shipment_Service_Type" />
+      <End Role="Shipment" EntitySet="Shipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipping_Address" Association="EbusinessModel.Store.FK_Shipping_Address">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Customer" Association="EbusinessModel.Store.FK_Shopping_Cart_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Shopping_Cart" EntitySet="Shopping_Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Items_Product_Specification" Association="EbusinessModel.Store.FK_Shopping_Cart_Items_Product_Specification">
+      <End Role="Product_Specification" EntitySet="Product_Specification" />
+      <End Role="Shopping_Cart_Items" EntitySet="Shopping_Cart_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Items_Shopping_Cart" Association="EbusinessModel.Store.FK_Shopping_Cart_Items_Shopping_Cart">
+      <End Role="Shopping_Cart" EntitySet="Shopping_Cart" />
+      <End Role="Shopping_Cart_Items" EntitySet="Shopping_Cart_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shopping_Cart_Shopping_Cart_State" Association="EbusinessModel.Store.FK_Shopping_Cart_Shopping_Cart_State">
+      <End Role="Shopping_Cart_State" EntitySet="Shopping_Cart_State" />
+      <End Role="Shopping_Cart" EntitySet="Shopping_Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Or_Provence_Country" Association="EbusinessModel.Store.FK_State_Or_Provence_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State_Or_Provence" EntitySet="State_Or_Provence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Contact_Preson_Supplier" Association="EbusinessModel.Store.FK_Supplier_Contact_Preson_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Supplier_Contact_Preson" EntitySet="Supplier_Contact_Preson" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Add_ID" />
+    </Key>
+    <Property Name="Add_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Add_Street_Number" Type="nchar" MaxLength="10" />
+    <Property Name="Add_Street_Name" Type="nchar" MaxLength="150" />
+    <Property Name="Add_Apartment_Number" Type="nchar" MaxLength="10" />
+    <Property Name="Add_City" Type="int" />
+    <Property Name="Add_State_or_Province" Type="int" />
+    <Property Name="Add_Country" Type="int" />
+    <Property Name="Add_Postal_Code" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Cate_ID" />
+    </Key>
+    <Property Name="Cate_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cate_Name" Type="nchar" MaxLength="100" />
+    <Property Name="Cate_Description" Type="nchar" MaxLength="255" />
+    <Property Name="Cate_Tax" Type="float" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="City_ID" />
+    </Key>
+    <Property Name="City_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="City_Name" Type="nchar" MaxLength="100" />
+    <Property Name="State_Or_Provence_ID" Type="int" />
+    <Property Name="Country_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Cont_ID" />
+    </Key>
+    <Property Name="Cont_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cont_Name" Type="nchar" MaxLength="40" />
+    <Property Name="Cont_Code" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Cust_Id" />
+    </Key>
+    <Property Name="Cust_Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cust_FName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cust_LName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cust_email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cust_Cellphone" Type="nvarchar" MaxLength="30" />
+    <Property Name="Cust_Home_Phone" Type="nvarchar" MaxLength="30" />
+    <Property Name="Cust_Username" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cust_Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cust_Login_Status" Type="int" />
+    <Property Name="Cust_Billing_Address" Type="bigint" />
+    <Property Name="Cust_Shipping_Address" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Customer_Claim">
+    <Key>
+      <PropertyRef Name="Claim_ID" />
+    </Key>
+    <Property Name="Claim_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Clain_Subject" Type="nvarchar" MaxLength="100" />
+    <Property Name="Claim_Description" Type="nvarchar" />
+    <Property Name="Payment_ID" Type="bigint" />
+    <Property Name="Shipment_ID" Type="bigint" />
+    <Property Name="Customer_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_Credit_Cards">
+    <Key>
+      <PropertyRef Name="Cust_Credit_ID" />
+    </Key>
+    <Property Name="Cust_Credit_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cust_Credit_Card_No" Type="nchar" Nullable="false" MaxLength="30" />
+    <Property Name="Cust_Card_Expiration_Date" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cust_Card_Holder_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cust_Card_Security_Value" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cust_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_Review">
+    <Key>
+      <PropertyRef Name="Rev_ID" />
+    </Key>
+    <Property Name="Rev_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rev_rate" Type="int" />
+    <Property Name="Rev_Subject" Type="nchar" MaxLength="100" />
+    <Property Name="Rev_Description" Type="nvarchar" />
+    <Property Name="Product_ID" Type="bigint" Nullable="false" />
+    <Property Name="Customer_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_State">
+    <Key>
+      <PropertyRef Name="Cust_State_ID" />
+    </Key>
+    <Property Name="Cust_State_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cust_State_Description" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Dimension_Unit">
+    <Key>
+      <PropertyRef Name="Unit_ID" />
+    </Key>
+    <Property Name="Unit_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Unit_Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Ord_Number" />
+    </Key>
+    <Property Name="Ord_Number" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ord_Date" Type="datetime" />
+    <Property Name="Ord_Status" Type="int" />
+    <Property Name="Cust_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Order_Line_Item">
+    <Key>
+      <PropertyRef Name="Ord_Line_ID" />
+    </Key>
+    <Property Name="Ord_Line_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Unit_Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Sub_Total" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Product_Item_ID" Type="bigint" />
+    <Property Name="Order_Number" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order_State">
+    <Key>
+      <PropertyRef Name="Ord_State_ID" />
+    </Key>
+    <Property Name="Ord_State_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Oder_State_Description" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Payment_Number" />
+    </Key>
+    <Property Name="Payment_Number" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Amount" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Authorization_Number" Type="nvarchar" MaxLength="30" />
+    <Property Name="Customer_ID" Type="bigint" Nullable="false" />
+    <Property Name="Order_Number" Type="bigint" Nullable="false" />
+    <Property Name="Shipment_ID" Type="bigint" Nullable="false" />
+    <Property Name="Credit_Card_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_By_Supplier">
+    <Key>
+      <PropertyRef Name="Pro_Sup_ID" />
+    </Key>
+    <Property Name="Pro_Sup_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Product_Number" Type="bigint" />
+    <Property Name="Supplier_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="Product_Dimension">
+    <Key>
+      <PropertyRef Name="Dim_ID" />
+    </Key>
+    <Property Name="Dim_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Length" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="Width" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="Height" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="Unit_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Item">
+    <Key>
+      <PropertyRef Name="Pro_Item_ID" />
+    </Key>
+    <Property Name="Pro_Item_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Pro_Item_Serial_Number" Type="nchar" Nullable="false" MaxLength="255" />
+    <Property Name="Product_Number" Type="bigint" Nullable="false" />
+    <Property Name="Pro_Item__State" Type="int" Nullable="false" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Item_State">
+    <Key>
+      <PropertyRef Name="Pro_Item_State_ID" />
+    </Key>
+    <Property Name="Pro_Item_State_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Pro_Item_State_Description" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Product_Specification">
+    <Key>
+      <PropertyRef Name="Pro_Number" />
+    </Key>
+    <Property Name="Pro_Number" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Pro_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Pro_Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Pro_Available_Balance" Type="int" />
+    <Property Name="Pro_OnOrder_Quantity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pro_Return_Balance" Type="int" />
+    <Property Name="Por_OnExchange_Balance" Type="int" />
+    <Property Name="Pro_Weight" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Dimension_ID" Type="bigint" />
+    <Property Name="Pro_Category_ID" Type="int" />
+    <Property Name="Pro_Image_File_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pro_Brand" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shipment">
+    <Key>
+      <PropertyRef Name="Ship_ID" />
+    </Key>
+    <Property Name="Ship_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ship_DateTime" Type="datetime" />
+    <Property Name="Ship_Cost" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Ship_Origin" Type="bigint" Nullable="false" />
+    <Property Name="Ship_Destination" Type="bigint" Nullable="false" />
+    <Property Name="Ship_Service_Type" Type="int" Nullable="false" />
+    <Property Name="Customer_ID" Type="bigint" Nullable="false" />
+    <Property Name="Product_Item_ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shipment_Service_Type">
+    <Key>
+      <PropertyRef Name="SST_ID" />
+    </Key>
+    <Property Name="SST_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Service_Type" Type="nchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Shopping_Cart">
+    <Key>
+      <PropertyRef Name="Cart_ID" />
+    </Key>
+    <Property Name="Cart_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cart_Date_And_Time" Type="datetime" />
+    <Property Name="Cart_Number_of_Products" Type="int" />
+    <Property Name="Cart_Total_Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Cart_State" Type="int" />
+    <Property Name="Cart_Customer_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Shopping_Cart_Items">
+    <Key>
+      <PropertyRef Name="CItem_ID" />
+    </Key>
+    <Property Name="CItem_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CItem_Shopping_Cart_ID" Type="bigint" Nullable="false" />
+    <Property Name="CItem_Product_Number" Type="bigint" Nullable="false" />
+    <Property Name="CItem_Quantity" Type="int" />
+    <Property Name="CItem_Sub_Total" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="Shopping_Cart_State">
+    <Key>
+      <PropertyRef Name="Cart_State_ID" />
+    </Key>
+    <Property Name="Cart_State_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cart_State_Description" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="State_Or_Provence">
+    <Key>
+      <PropertyRef Name="SoP_ID" />
+    </Key>
+    <Property Name="SoP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SoP_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SoP_Code" Type="nvarchar" MaxLength="2" />
+    <Property Name="Country_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Sup_ID" />
+    </Key>
+    <Property Name="Sup_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Sup_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sup_URL" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Supplier_Contact_Preson">
+    <Key>
+      <PropertyRef Name="Sup_Contact_Preson_ID" />
+    </Key>
+    <Property Name="Sup_Contact_Preson_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Sup_Contact_Preson_Name" Type="nchar" MaxLength="255" />
+    <Property Name="Sup_Contact_Preson_Email" Type="nchar" MaxLength="255" />
+    <Property Name="Sup_Contact_Preson_Cellpone" Type="nchar" MaxLength="30" />
+    <Property Name="Sup_Contact_Preson_Phone_Extension" Type="nchar" MaxLength="10" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <Association Name="FK_Address_City">
+    <End Role="City" Type="EbusinessModel.Store.City" Multiplicity="0..1" />
+    <End Role="Address" Type="EbusinessModel.Store.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="City_ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="Add_City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_Country">
+    <End Role="Country" Type="EbusinessModel.Store.Country" Multiplicity="0..1" />
+    <End Role="Address" Type="EbusinessModel.Store.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Cont_ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="Add_Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address_State_Or_Provence">
+    <End Role="State_Or_Provence" Type="EbusinessModel.Store.State_Or_Provence" Multiplicity="0..1" />
+    <End Role="Address" Type="EbusinessModel.Store.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_Or_Provence">
+        <PropertyRef Name="SoP_ID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="Add_State_or_Province" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Billing_Address">
+    <End Role="Address" Type="EbusinessModel.Store.Address" Multiplicity="0..1" />
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Add_ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Cust_Billing_Address" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country">
+    <End Role="Country" Type="EbusinessModel.Store.Country" Multiplicity="1" />
+    <End Role="City" Type="EbusinessModel.Store.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Cont_ID" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="Country_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_State_Or_Provence">
+    <End Role="State_Or_Provence" Type="EbusinessModel.Store.State_Or_Provence" Multiplicity="0..1" />
+    <End Role="City" Type="EbusinessModel.Store.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State_Or_Provence">
+        <PropertyRef Name="SoP_ID" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="State_Or_Provence_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Claim_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="1" />
+    <End Role="Customer_Claim" Type="EbusinessModel.Store.Customer_Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Customer_Claim">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Claim_Payment">
+    <End Role="Payment" Type="EbusinessModel.Store.Payment" Multiplicity="0..1" />
+    <End Role="Customer_Claim" Type="EbusinessModel.Store.Customer_Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="Payment_Number" />
+      </Principal>
+      <Dependent Role="Customer_Claim">
+        <PropertyRef Name="Payment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Credit_Cards_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="1" />
+    <End Role="Customer_Credit_Cards" Type="EbusinessModel.Store.Customer_Credit_Cards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Customer_Credit_Cards">
+        <PropertyRef Name="Cust_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Customer_State">
+    <End Role="Customer_State" Type="EbusinessModel.Store.Customer_State" Multiplicity="0..1" />
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer_State">
+        <PropertyRef Name="Cust_State_ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Cust_Login_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Review_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="1" />
+    <End Role="Customer_Review" Type="EbusinessModel.Store.Customer_Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Customer_Review">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Review_Product_Specification">
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="1" />
+    <End Role="Customer_Review" Type="EbusinessModel.Store.Customer_Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Specification">
+        <PropertyRef Name="Pro_Number" />
+      </Principal>
+      <Dependent Role="Customer_Review">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="0..1" />
+    <End Role="Order" Type="EbusinessModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Cust_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Line_Item_Order">
+    <End Role="Order" Type="EbusinessModel.Store.Order" Multiplicity="1" />
+    <End Role="Order_Line_Item" Type="EbusinessModel.Store.Order_Line_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Ord_Number" />
+      </Principal>
+      <Dependent Role="Order_Line_Item">
+        <PropertyRef Name="Order_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Order_State">
+    <End Role="Order_State" Type="EbusinessModel.Store.Order_State" Multiplicity="0..1" />
+    <End Role="Order" Type="EbusinessModel.Store.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_State">
+        <PropertyRef Name="Ord_State_ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Ord_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="1" />
+    <End Role="Payment" Type="EbusinessModel.Store.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Customer_Credit_Cards">
+    <End Role="Customer_Credit_Cards" Type="EbusinessModel.Store.Customer_Credit_Cards" Multiplicity="1" />
+    <End Role="Payment" Type="EbusinessModel.Store.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer_Credit_Cards">
+        <PropertyRef Name="Cust_Credit_ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="Credit_Card_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Payment_Order">
+    <End Role="Order" Type="EbusinessModel.Store.Order" Multiplicity="1" />
+    <End Role="Payment" Type="EbusinessModel.Store.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Ord_Number" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="Order_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_By_Supplier_Product_Specification">
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="0..1" />
+    <End Role="Product_By_Supplier" Type="EbusinessModel.Store.Product_By_Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Specification">
+        <PropertyRef Name="Pro_Number" />
+      </Principal>
+      <Dependent Role="Product_By_Supplier">
+        <PropertyRef Name="Product_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_By_Supplier_Supplier">
+    <End Role="Supplier" Type="EbusinessModel.Store.Supplier" Multiplicity="0..1" />
+    <End Role="Product_By_Supplier" Type="EbusinessModel.Store.Product_By_Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Sup_ID" />
+      </Principal>
+      <Dependent Role="Product_By_Supplier">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Dimension_Dimension_Unit">
+    <End Role="Dimension_Unit" Type="EbusinessModel.Store.Dimension_Unit" Multiplicity="1" />
+    <End Role="Product_Dimension" Type="EbusinessModel.Store.Product_Dimension" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dimension_Unit">
+        <PropertyRef Name="Unit_ID" />
+      </Principal>
+      <Dependent Role="Product_Dimension">
+        <PropertyRef Name="Unit_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Item_Product_Item_State">
+    <End Role="Product_Item_State" Type="EbusinessModel.Store.Product_Item_State" Multiplicity="1" />
+    <End Role="Product_Item" Type="EbusinessModel.Store.Product_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Item_State">
+        <PropertyRef Name="Pro_Item_State_ID" />
+      </Principal>
+      <Dependent Role="Product_Item">
+        <PropertyRef Name="Pro_Item__State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Item_Product_Specification">
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="1" />
+    <End Role="Product_Item" Type="EbusinessModel.Store.Product_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Specification">
+        <PropertyRef Name="Pro_Number" />
+      </Principal>
+      <Dependent Role="Product_Item">
+        <PropertyRef Name="Product_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Item_Supplier">
+    <End Role="Supplier" Type="EbusinessModel.Store.Supplier" Multiplicity="1" />
+    <End Role="Product_Item" Type="EbusinessModel.Store.Product_Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Sup_ID" />
+      </Principal>
+      <Dependent Role="Product_Item">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Specification_Category">
+    <End Role="Category" Type="EbusinessModel.Store.Category" Multiplicity="0..1" />
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Cate_ID" />
+      </Principal>
+      <Dependent Role="Product_Specification">
+        <PropertyRef Name="Pro_Category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Specification_Product_Dimension">
+    <End Role="Product_Dimension" Type="EbusinessModel.Store.Product_Dimension" Multiplicity="0..1" />
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Dimension">
+        <PropertyRef Name="Dim_ID" />
+      </Principal>
+      <Dependent Role="Product_Specification">
+        <PropertyRef Name="Dimension_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="1" />
+    <End Role="Shipment" Type="EbusinessModel.Store.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_Order_Line_Item">
+    <End Role="Order_Line_Item" Type="EbusinessModel.Store.Order_Line_Item" Multiplicity="1" />
+    <End Role="Shipment" Type="EbusinessModel.Store.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order_Line_Item">
+        <PropertyRef Name="Ord_Line_ID" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="Product_Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_Shipment_Service_Type">
+    <End Role="Shipment_Service_Type" Type="EbusinessModel.Store.Shipment_Service_Type" Multiplicity="1" />
+    <End Role="Shipment" Type="EbusinessModel.Store.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shipment_Service_Type">
+        <PropertyRef Name="SST_ID" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="Ship_Service_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipping_Address">
+    <End Role="Address" Type="EbusinessModel.Store.Address" Multiplicity="0..1" />
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Add_ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Cust_Shipping_Address" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Customer">
+    <End Role="Customer" Type="EbusinessModel.Store.Customer" Multiplicity="0..1" />
+    <End Role="Shopping_Cart" Type="EbusinessModel.Store.Shopping_Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Cust_Id" />
+      </Principal>
+      <Dependent Role="Shopping_Cart">
+        <PropertyRef Name="Cart_Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Items_Product_Specification">
+    <End Role="Product_Specification" Type="EbusinessModel.Store.Product_Specification" Multiplicity="1" />
+    <End Role="Shopping_Cart_Items" Type="EbusinessModel.Store.Shopping_Cart_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Specification">
+        <PropertyRef Name="Pro_Number" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_Items">
+        <PropertyRef Name="CItem_Product_Number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Items_Shopping_Cart">
+    <End Role="Shopping_Cart" Type="EbusinessModel.Store.Shopping_Cart" Multiplicity="1" />
+    <End Role="Shopping_Cart_Items" Type="EbusinessModel.Store.Shopping_Cart_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shopping_Cart">
+        <PropertyRef Name="Cart_ID" />
+      </Principal>
+      <Dependent Role="Shopping_Cart_Items">
+        <PropertyRef Name="CItem_Shopping_Cart_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shopping_Cart_Shopping_Cart_State">
+    <End Role="Shopping_Cart_State" Type="EbusinessModel.Store.Shopping_Cart_State" Multiplicity="0..1" />
+    <End Role="Shopping_Cart" Type="EbusinessModel.Store.Shopping_Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shopping_Cart_State">
+        <PropertyRef Name="Cart_State_ID" />
+      </Principal>
+      <Dependent Role="Shopping_Cart">
+        <PropertyRef Name="Cart_State" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Or_Provence_Country">
+    <End Role="Country" Type="EbusinessModel.Store.Country" Multiplicity="1" />
+    <End Role="State_Or_Provence" Type="EbusinessModel.Store.State_Or_Provence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Cont_ID" />
+      </Principal>
+      <Dependent Role="State_Or_Provence">
+        <PropertyRef Name="Country_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_Contact_Preson_Supplier">
+    <End Role="Supplier" Type="EbusinessModel.Store.Supplier" Multiplicity="1" />
+    <End Role="Supplier_Contact_Preson" Type="EbusinessModel.Store.Supplier_Contact_Preson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Sup_ID" />
+      </Principal>
+      <Dependent Role="Supplier_Contact_Preson">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

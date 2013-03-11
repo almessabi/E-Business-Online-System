@@ -1,0 +1,57 @@
+﻿@model E_Business_Online_System.Models.Shopping_Cart
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Shopping_Cart</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cart_ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cart_ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cart_Date_And_Time)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cart_Date_And_Time)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cart_Number_of_Products)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cart_Number_of_Products)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cart_Total_Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cart_Total_Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Shopping_Cart_State.Cart_State_Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Shopping_Cart_State.Cart_State_Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Customer.Cust_FName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Customer.Cust_FName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
